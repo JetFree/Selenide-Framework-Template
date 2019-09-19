@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration>
+
+    <Appenders>
+        <Console name="Console"
+                 target="SYSTEM_OUT">
+            <PatternLayout pattern="%-5p [%t] [%d{ABSOLUTE}] %maxLen{%m}{1000} %n"/>
+        </Console>
+    </Appenders>
+
+    <Loggers>
+        <Root level="INFO">
+            <AppenderRef ref="Console"/>
+        </Root>
+
+        <Logger name="org.openqa.selenium.remote" level="OFF"/>
+        <Logger name="con.taskize.*" level="INFO" additivity="false"/>
+    </Loggers>
+</Configuration>
